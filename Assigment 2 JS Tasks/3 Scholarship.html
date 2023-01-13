@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Scholarship</title>
+    
+    <style>
+        .textcolor {
+            color: rgb(15, 161, 15);
+        }
+        .redcolor{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--Input marks of student and assign scholarship  -->
+    <h1>Q3: Write a code that inputs marks of a students and assign scholarship on the following
+        criteria.</h1>
+    <script>
+        var marks=prompt("enter the marks of student");
+        if(marks>700){
+            document.write("<h3 class='textcolor'> Congratulations! you got scholarship of Rs 3000 </h3> ");
+        }
+        else if(marks>650 && marks<699){
+            document.write("<h3 class='textcolor'>Congratulations! you got the scholarship of Rs 2500 </h3> ");
+        }
+        else if(marks>600 && marks<649){
+            document.write("<h3 class='textcolor'>Congratulations! you got the scholarship of Rs 2000 </h3> ");
+        }
+else {
+    document.write("<h3 class='redcolor'>Ohh Sorry, you are not eligible for the scholarship </h3>")
+}
+    </script>
+</body>
+</html>

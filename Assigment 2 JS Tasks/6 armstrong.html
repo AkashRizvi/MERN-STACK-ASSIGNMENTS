@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6: ArmStrong</title>
+
+    <style>
+        .textcolor {
+            color: rgb(15, 161, 15);
+        }
+        .redcolor{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- to find armstrong number -->
+
+    <h1>Q6: Write a JavaScript program to find the armstrong numbers of 3 digit Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.</h1>
+    
+    <script>
+        var number=prompt("Enter the three digit integer");
+        var ones=number%10;
+        document.write("you entered a number " + number, "<br>")
+        var temp=parseInt(number/10);
+        var tens=temp%10;
+        var hunderds=parseInt(temp/10);
+        var pow=Math.pow(hunderds,3) + Math.pow(tens,3) +Math.pow(ones,3)
+        if(pow==number){
+            document.write("<h3 class='textcolor'> You enterd an ArmStrong number </h3>")
+        }
+        else{
+            document.write("<h3 class='redcolor'>Your entered number is not an ArmStrong number </h3> ")
+        }
+  
+    </script>
+</body>
+</html>
