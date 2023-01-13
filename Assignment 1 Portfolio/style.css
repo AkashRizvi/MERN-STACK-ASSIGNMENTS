@@ -1,0 +1,110 @@
+#coverphoto{
+    background-attachment: fixed;
+    background-image: url("assets/img/b9.jpg");
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+}
+.container-fluid{
+    margin-top:20px;
+}
+.profileImg{
+    width: 260px;
+    height: 260px;
+    border-radius: 30px;
+}
+.btn-info{
+    color: white;
+    font-weight: bold;
+}
+.btn-info:hover{
+    border-color: #0DCAF0 1px solid;
+    color: black;
+    background-color: transparent;
+}
+
+.h2{
+    color: #175A9B;
+}
+.h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    top: 5;
+    left: 5;
+}
+.progress-wrap{
+    padding: 5px 8px;
+}
+.skill-title{
+    width: 20%;
+}
+.skill-bar{
+    width: 80%;
+}
+.resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #149ddd;
+    position: relative;
+  }
+ .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #149ddd;
+}
+h4{
+    color:#175A9B;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#portfolio-flters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 20px;
+    background-color:lightgray;
+  }
+#portfolio-flters li:hover {
+    border-radius: 20px;
+    color: white;
+    background: #149ddd;
+
+  }
+#portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 50px;
+  }
+  li.filter-active {
+    color: #fff;
+    background: #149ddd;
+  }
+
+  .portfolio_img{
+    width: 290px;
+  }
