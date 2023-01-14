@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5: Sum and Pair Number</title>
+  
+</head>
+
+<body>
+    <h1>Q5: Write a JavaScript program to find a pair of elements (indices of the two numbers) from a given array whose sum equals a specific target number.</h1>
+
+    <script>
+        function pair() {
+            arr = new Array();
+            var input, value,i,j;
+            var flag=false;
+            var num1, num2;
+            input = prompt("Please Enter Some Words for Arrays: ");
+            arr = input.split(" ");
+
+            console.table("Orignal Array:" + arr);
+            document.write("The orignal array is : " + arr);
+
+            number = prompt("Now Enter any number to check pair:");
+            for(i=0; i<arr.length; i++){
+                var value=arr[i];
+                for(j=i+1; j<arr.length; j++){
+                    var sum=0;
+                    sum=(parseInt(value)+parseInt(arr[j]));
+                    if(sum==number){
+                        num1=value;
+                        num2=arr[j];
+                        flag=true;
+                    }
+                }
+            }
+            if(flag==true){
+                document.write("The Pair of two number are : ("+num1+") & ("+num2+")");
+            }
+            else{
+                document.write("<br><br>There is no Possible pair");
+            }
+
+        }
+        
+        pair();
+    </script>
+</body>
+
+</html>

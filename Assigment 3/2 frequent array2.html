@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=2, initial-scale=1.0">
+    <title>Q2: Frequent Array</title>
+</head>
+
+<body>
+    <h1>Q2: Write a program to find the most frequent item of an array?</h1>
+    <script>
+        var arr1 = new Array();
+        for (var i = 0; i < 10; i++) {
+            var n = prompt("enter the number" + i);
+            arr1[i] = n;
+        }
+        var mf = 1;
+        var m = 0;
+        var item;
+        for (var i = 0; i < arr1.length; i++) {
+            for (var j = i; j < arr1.length; j++) {
+                if (arr1[i] == arr1[j])
+                    m++;
+                if (mf < m) {
+                    mf = m;
+                    item = arr1[i];
+                }
+            }
+            m = 0;
+        }
+        document.write(item + " ( " + mf + " times ) ");
+    </script>
+</body>
+
+</html>

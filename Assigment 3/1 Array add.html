@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1: Add Number</title>
+
+</head>
+
+<body>
+    <h1>input and display</h1>
+    <label for="">Enter a value</label>
+    <input type="text" id="input1" placeholder="Enter a value">
+    <br> <br>
+    <button onclick="add()">Add</button>
+    <button onclick="display()">display</button>
+
+    <div>
+        <h1>Q1: Write a program that will take value from input in HTML page and when you press an ADD button it will add that to an array. You must put a condition that if the number is integer, then only it is added. Then do not add it. Also, when you press the DISPLAY button all the values should be displayed in div.</h1>
+        <p id="demo"></p>
+    </div>
+    <script>
+        // Write a program that will take value from <input> in HTML page and when you press a ADD button it will add that to an array. You have to put a condition that if the number is integer than only it is added. Then do not add it. Also, when you press the DISPLAY button all the values should be displayed in div
+        addDisplay = new Array();
+        var result = false;
+        function add() {
+
+            var input = document.getElementById("input1").value;
+            var flag = true;
+            for (var i = 0; i < input.length; i++) {
+                if (input[i] < '0' || input[i] > '9') {
+                    flag = false;
+                }
+            }
+            if (flag == false) {
+                document.write("string");
+            }
+            else {
+                document.write("integer");
+                for (var i = 0; i < input.length; i++) {
+                    addDisplay[i] = input[i];
+                }
+                result = true;
+            }
+        }
+        function display() {
+            if (result == true) {
+                document.getElementById("demo").innerText = "the integer array is: /n" + addDisplay
+            }
+            else {
+                document.getElementById("demo").innerText = "you enter string: /n";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4: Duplicate element</title>
+    
+ 
+</head>
+<body>
+    <!-- Q4: Write a JavaScript program to remove duplicate items from an array and show which elements were duplicated. -->
+   
+    <h1>Q4: Write a JavaScript program to remove duplicate items from an array and show which elements
+        were duplicated.</h1>
+
+        <script>
+            function duplicate(ar){
+    var count=1;
+    var freq=1;
+    
+                for(var j=0;j<ar.length;j++){
+                    var dup=ar[j];
+                    for(var k=j+1;k<ar.length;k++){
+                        if(dup==ar[k]){
+                            
+                            
+                            
+                            document.write("duplicate value = ", ar[k],"<br>");
+                            ar.splice(k, 1)
+                         
+                          count++
+                          
+                           k=k-1;
+                        }
+                       
+                    }
+                   
+    
+    
+                   // document.write(dup,"rupeats" ,count," <br>");
+                  
+                    if(count>freq){
+                        var mf=dup;
+                    }
+                    else if(count==freq){
+                        var mf1=dup;
+                    }
+                    freq=count;
+                    count=1;
+    
+    
+    
+                }
+                document.write("Most Frequent element = ",mf,",",mf1 , "<br>");
+                document.write("New Array = " ,ar," <br>");
+            }
+        </script>
+    <script>
+        a= new Array(10);
+      
+        for(var i=0;i<10;i++){
+            a[i]=prompt("enter an array of 10 numbers");
+        }
+      
+       duplicate(a);
+        
+    </script>
+</body>
+</html>

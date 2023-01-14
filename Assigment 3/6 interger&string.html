@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6: Integer Or String and Return It</title>
+
+   
+</head>
+<body>
+    
+    <h1>Q6: Write a function in JavaScript that takes array as an input. It checks if the element of the number is integer, then it calls another function that will add this number with previous one and return the sum and store it in an integer array. If it is string then it calls a function that will concat()strings and with the previous one and strong in another array. When the array is exhausted it should return both integer and string array.</h1>
+
+    <script>
+        function integerString(arr){
+            var i,eng ='',num=0;
+            inte = new Array();
+            stri = new Array();
+            for(i=0; i<arr.length; i++){
+                arr[i] = prompt("Enter "+(parseInt(i)+parseInt(1)) +" Value :");
+            }
+            document.write("Orignal Array is: "+arr);
+            console.table("Orignal Array : "+arr);
+            var k=0, l=0;
+            for(i=0; i<arr.length; i++){
+                if(arr[i]<'0' || arr[i]>'9'){
+                    eng=eng+arr[i];
+                    console.log(eng);
+                    stri[k]=eng;
+                    k++;
+                }
+                else{
+                    num=(parseInt(num)+parseInt(arr[i]));
+                    // num=num+arr[i];
+                    console.log(num);
+                    inte[l]=num;
+                    l++;
+                }
+            }
+
+            console.table("String Array is "+stri);
+            console.table("Integer Array is "+inte);
+
+            document.write("<br><br>String Array is "+stri);
+            document.write("<br><br>Integer Array is "+inte);
+        }
+  
+        var size= prompt("Enter The Size Of array:");
+        alert("The Array Size is "+size);
+        arr = new Array(parseInt(size));
+        integerString(arr);
+    </script>
+</body>
+</html>

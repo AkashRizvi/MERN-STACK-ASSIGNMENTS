@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: input array or not</title>
+</head>
+<body>
+    <h1>Q3: Write a JavaScript function to check whether an `input` is in an array or not. </h1>
+    <script>
+        function compare(n){
+            const arr=[22, "Ali" , 45 , "AKash" , 90 , "Raza" , 1];
+
+
+            for(var i=0;i<arr.length;i++){
+                if(n==arr[i]){
+                    document.write("Input is present in array.")
+                    break;
+                }
+                else{
+                    document.write("Input is not present in array.")
+                    break;
+                }
+
+            }
+
+        }
+        var num=prompt("Enter any number or text");
+        out= compare(num)
+    </script>
+</body>
+</html>
